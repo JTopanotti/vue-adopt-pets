@@ -1,18 +1,23 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Adopt a new best friend</h1>
+    <button btn btn-primary>Add New Pet</button>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
+    name: 'Home',
+    data() {
+      return {
+        showPetForm: false
+      }
+    },
+    methods: {
+      togglePetForm() {
+        this.showPetForm = !this.showPetForm
+      }
+    }
 }
 </script>

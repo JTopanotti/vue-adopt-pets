@@ -21,6 +21,9 @@ export default new Vuex.Store({
       commit('appendPet', payload)
     }
   },
-  modules: {
+  getters: {
+    animalsCount: (state) => {
+      return state.cats.length + state.dogs.length
+    }
   }
 })
